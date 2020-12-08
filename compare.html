@@ -1,0 +1,148 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- Bring in Bootstrap CSS -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+      <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+      <link rel="stylesheet" type="text/css" medida="screen" href="static/css/style.css">
+      <title>Compare</title>
+   </head>
+   <body>
+      <nav>
+         <div class= 'logo'>
+            <h4> California Fires</h4>
+         </div>
+
+         <ul class="nav-links" id="myDIV">
+            <li>
+                <a class="btn active" href="index.html">Home</a>
+            </li>
+            <li>
+                <a class="btn" href="table.html">Incidents</a>
+            </li>
+            <li>
+                <a class="btn" href="compare.html">Charts</a>
+             </li>
+             <li>
+              <a class="btn" href="interactive.html">More Charts</a>
+             </li>
+             <li>
+                <a class="btn" href="maps.html">Interactive Maps</a>
+             </li>
+                        <li>
+                <a class="btn" href="nyt.html">Articles</a>
+            </li>
+            <li>
+              <a class="btn" href="resume.html">Resume</a>
+          </li>
+          <li>
+            <a class="btn" href="feedback.html">Feedback</a>
+          </li>
+        </ul>
+
+        <script>
+         // Add active class to the current button (highlight it)
+         var header = document.getElementById("myDIV");
+         var btns = header.getElementsByClassName("btn");
+         for (var i = 0; i < btns.length; i++) {
+           btns[i].addEventListener("click", function() {
+           var current = document.getElementsByClassName("active");
+           if (current.length > 0) { 
+             current[0].className = current[0].className.replace(" active", "");
+           }
+           this.className += " active";
+           });
+         }
+         </script>
+        
+         <form class="form-inline my-2 my-lg-0">
+            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Fires.." title="Type in a name">
+         </form>
+         <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+         </div>
+      </nav>
+      <div class="container" style="padding-bottom: 50px;">
+         <br>
+         <h1 class="title" style="text-align: center">Wildfires from 2013 To 2020</h1>
+         <hr class="light">
+         <!-- <p>Click any plot to get an in-depth analysis.</p> -->
+         <br>
+         <div class="row">
+            <div class="col-lg-6" style="padding: 30px;">
+               <h3 class="title" style="text-align: center">Average Duration of Fire Per Year</h3>
+               <hr class="light">
+               <a href="images/Fig1.png" target="_blank">
+               <img alt="Graph" src="images/Fig1.png" class="image-fluid">
+               </a>
+            </div>
+            <div class="col-lg-6" style="padding: 30px;">
+               <h3 class="title" style="text-align: center">Fires Per Year</h3>
+               <hr class="light">
+               <a href="images/Fig2.png" target="_blank">
+               <img alt="Graph" src="images/Fig2.png" class="image-fluid">
+               </a>
+            </div>
+         </div>
+         <br>
+         <div class="row">
+            <div class="col-lg-6" style="padding: 30px;">
+               <h3 class="title" style="text-align: center">Fires Per Month</h3>
+               <hr class="light">
+               <a href="images/Fig3.png" target="_blank">
+               <img alt="Graph" src="images/Fig3.png" class="image-fluid">
+               </a>
+            </div>
+            <div class="col-lg-6" style="padding: 30px;">
+               <h3 class="title" style="text-align: center">Avg Temp Increase by County (1895-2019)</h3>
+               <hr class="light">  
+               <div id='plot'></div>
+              
+               <!-- <a href="images/Fig4.png" target="_blank">
+               <img alt="Graph" src="images/Fig4.png" class="image-fluid"> -->
+               <!-- </a> -->
+            </div>
+         </div>
+      </div>
+    
+      <div class="row">
+         <div class="col-sm-12">
+   
+           <!-- Line Break followed by closing -->
+           <hr>
+           <h5 class="text-center">
+             <small>Made with lots and lots of
+               <i class="fa fa-heart"></i>
+             </small>
+           </h5>
+   
+         </div>
+       </div>
+       
+      <footer>
+         <div class="footer">Copyright © Javane Jones 2020 </div>
+      </footer>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.9.1/d3.min.js"></script>
+      <script src="static/js/chart.js"></script>
+    
+   </body>
+</html>
+

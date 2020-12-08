@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bring in Bootstrap CSS -->
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+    crossorigin=""></script>
+     <!--D3 cdn-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.5.0/d3.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/css/styles.css">
+    <title>Index</title>
+
+</head>
+
+<body>
+    <nav>
+        <div class= 'logo'>
+            <h4> California Fires</h4> 
+
+        </div>
+        <ul class="nav-links" id="myDIV">
+          <li>
+              <a class="btn active" href="index.html">Home</a>
+          </li>
+          <li>
+              <a class="btn" href="table.html">Incidents</a>
+          </li>
+          <li>
+              <a class="btn" href="compare.html">Charts</a>
+           </li>
+           <li>
+            <a class="btn" href="interactive.html">More Charts</a>
+           </li>
+           <li>
+              <a class="btn" href="maps.html">Interactive Maps</a>
+           </li>
+                      <li>
+              <a class="btn" href="nyt.html">Articles</a>
+          </li>
+          <li>
+            <a class="btn" href="resume.html">Resume</a>
+        </li>
+        <li>
+          <a class="btn" href="feedback.html">Feedback</a>
+        </li>
+      </ul>
+
+      <script>
+        // Add active class to the current button (highlight it)
+        var header = document.getElementById("myDIV");
+        var btns = header.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+          btns[i].addEventListener("click", function() {
+          var current = document.getElementsByClassName("active");
+          if (current.length > 0) { 
+            current[0].className = current[0].className.replace(" active", "");
+          }
+          this.className += " active";
+          });
+        }
+      </script>
+               
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+<BR>
+    <h1 class="title" style="text-align: center">Contructive Feedback</h1> 
+    <hr>
+      <div class="todos">
+      <form id="todo-form" method="POST">
+        <label for="todo-text">Add a Feedback:</label>
+        <input type="text" placeholder="What are some ways I can improve? &#128512;" name="todo-text" id="todo-text" />
+      </form>
+      <p>Feedback Count: <span id="todo-count">0</span></p>
+      <ul id="todo-list"></ul>
+    </div>
+
+    
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+    crossorigin=""></script>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+    crossorigin=""></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+    
+    <script type="text/javascript" src="static/js/config.js"></script>
+    <!-- <script src="static/js/app.js"></script> -->
+    <script src="static/js/scripts.js"></script>
+  </body>
+</html>

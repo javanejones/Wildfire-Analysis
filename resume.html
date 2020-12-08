@@ -1,0 +1,260 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Resume</title>
+
+<link type="text/css" rel="stylesheet" href="blue/css/print.css" media="print"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+<link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+<link type="text/css" rel="stylesheet" href="blue/css/blue.css" />
+<link rel="stylesheet" href="static/css/style.css">
+
+<!--[if IE 7]>
+<link href="css/ie7.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE 6]>
+<link href="css/ie6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<script type="text/javascript" src="blue/js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="blue/js/jquery.tipsy.js"></script>
+<script type="text/javascript" src="blue/js/cufon.yui.js"></script>
+<script type="text/javascript" src="blue/js/scrollTo.js"></script>
+<script type="text/javascript" src="blue/js/myriad.js"></script>
+<script type="text/javascript" src="blue/js/jquery.colorbox.js"></script>
+<script type="text/javascript" src="blue/js/custom.js"></script>
+<script type="text/javascript">
+		Cufon.replace('h1,h2');
+</script>
+</head>
+<body>
+
+  <nav>
+    <div class= 'logo'>
+        <h4> California Fires</h4> 
+
+    </div>
+    <ul class="nav-links" id="myDIV">
+      <li>
+          <a class="btn active" href="index.html">Home</a>
+      </li>
+      <li>
+          <a class="btn" href="table.html">Incidents</a>
+      </li>
+      <li>
+          <a class="btn" href="compare.html">Charts</a>
+       </li>
+       <li>
+        <a class="btn" href="interactive.html">More Charts</a>
+       </li>
+       <li>
+          <a class="btn" href="maps.html">Interactive Maps</a>
+       </li>
+                  <li>
+          <a class="btn" href="nyt.html">Articles</a>
+      </li>
+      <li>
+        <a class="btn" href="resume.html">Resume</a>
+    </li>
+    <li>
+      <a class="btn" href="feedback.html">Feedback</a>
+    </li>
+  </ul>
+
+  <script>
+    // Add active class to the current button (highlight it)
+    var header = document.getElementById("myDIV");
+    var btns = header.getElementsByClassName("btn");
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function() {
+      var current = document.getElementsByClassName("active");
+      if (current.length > 0) { 
+        current[0].className = current[0].className.replace(" active", "");
+      }
+      this.className += " active";
+      });
+    }
+  </script>
+
+    <form class="form-inline my-2 my-lg-0">
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Fires.." title="Type in a name">
+      </form>
+      
+    <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+    </div>
+</nav>
+
+<!-- Begin Wrapper -->
+<div id="wrapper">
+  <div class="wrapper-top"></div>
+  <div class="wrapper-mid">
+    <!-- Begin Paper -->
+    <div id="paper">
+      <div class="paper-top"></div>
+      <div id="paper-mid">
+        <div class="entry">
+          <!-- Begin Image -->
+          <img class="portrait" src="blue/images/image.jpg" alt="Javane Jones" />
+          <!-- End Image -->
+          <!-- Begin Personal Information -->
+          <div class="self">
+            <h1 class="name">Javane Jones <br />
+              <span>Financial Assistant</span></h1>
+            <ul>
+              <li class="ad">Evanston, IL</li>
+              <li class="mail">javanejones@gmail.com</li>
+              <li class="tel">+1 847 345 7897</li>
+            </ul>
+          </div>
+          <!-- End Personal Information -->
+          <!-- Begin Social -->
+          <div class="social">
+            <ul>
+              <li><a class='north' href="#" title="Download .pdf"><img src="blue/images/icn-save.jpg" alt="Download the pdf version" /></a></li>
+              <li><a class='north' href="javascript:window.print()" title="Print"><img src="blue/images/icn-print.jpg" alt="" /></a></li>
+              <li><a class='north' id="contact" href="blue/contact/index.html" title="Contact Me"><img src="blue/images/icn-contact.jpg" alt="" /></a></li>
+              <li><a class='north' href="https://www.linkedin.com/in/javane-jones/" title="My Linkedin Profile"><img src="blue/images/linkedin.png" alt="" /></a></li>
+              <li><a class='north' href="https://github.com/javanejones" title="My Github Profile"><img src="blue/images/github-icon.png" alt="" /></a></li>
+            </ul>
+          </div>
+          <!-- End Social -->
+        </div>
+        <!-- Begin 1st Row -->
+        <div class="entry">
+          <h2>Summary</h2>
+          <p>Resourceful and self-motivated business professional with 10+ years of customer service and finance experience, reputation for providing high-quality service; experienced in procedure and process creation, responsible and diligent in maintaining accurate records and identifying areas of improvement.  Adept at working independently and collaborating with teams across multiple functions to take information from a wide variety of sources and effectively break down concepts in nonprofessional terms to diverse audiences, excels at solving complex problems.</p>
+        </div>
+        <div class="entry">
+        <!-- <p>Multidisciplinary, driven Data Analyst with a passion for condensing large data into a simple to understand story.  Adept at working independently and collaborating with teams across multiple functions to take information from a wide variety of sources and effectively break down concepts in nonprofessional terms to diverse audiences, excels at solving complex problems.</p> -->
+        </div>
+        <!-- End 1st Row -->
+        <!-- Begin 2nd Row -->
+        <div class="entry">
+          <h2>EDUCATION</h2>
+          <div class="content">
+            <!-- <h3>Sep 2005 - Feb 2007</h3> -->
+            <p>Northwestern University, Evanston, IL <br />
+              <em>Professional Programs, Data Science, & Visualization (Certificate)</em></p>
+          </div>
+          <div class="content">
+            <!-- <h3>Sep 2001 - Jun 2005</h3> -->
+            <p>Northeastern Illinois University, Chicago, IL<br />
+              <em>Bachelors in Arts, Economics</em></p>
+          </div>
+          <div class="content">
+            <!-- <h3>Sep 2001 - Jun 2005</h3> -->
+            <p>Oakton Community College, Des Plaines, IL<br />
+              <em>Associate in Arts, Liberal Arts</em></p>
+          </div>
+        </div>
+        <!-- End 2nd Row -->
+        <!-- Begin 3rd Row -->
+        <div class="entry">
+          <h2>EXPERIENCE</h2>
+          <div class="content">
+            <h3>2019 - Present</h3>
+            <p>Northwestern University, Evanston, IL <br />
+              <em>Financial Assistant</em></p>
+            <ul class="info">
+              <li>Identified and improved gaps in communication, processes, and procedures through document analysis and workflow analysis. </li>
+              <li>Evaluate data analysis and impact of initiatives and communicates findings to management.</li>
+              <li>Maximized team knowledge and productivity by creating procedure and process, effectively training, monitoring, and directing employees in applying best practices and administrative protocols. </li>
+              <li>Key day to day responsibilities included: invoice creation, bank deposits, wire transfer verification, process CRT’s, process payment request, process reimbursement, process purchase orders, process journals, organize trackers, document review, client outreach, forecasting, budget preparation, reconciliation and reading financial statements.</li>
+            </ul>
+          </div>
+          <div class="content">
+            <h3>2011 - 2019</h3>
+            <p>Food Operations Specialist <br />
+              <em>United States Army</em></p>
+            <ul class="info">
+              <li>Facilitated the monthly administrative duties, duties included: placing food order, gathering all necessary equipment for food preparation, creating a meal preparation schedule, preparing a menu, preparing the recipes and ensure all soldiers had a meal. </li>
+              <li>Coordinated the development of soldiers, ensured each solider complied with Army standard policies and procedures, established monthly on one ones, discussed the army career path and post army life. </li>
+              <li>Set and enforced performance and service standards to keep consistency, high-quality environment devoted to customer satisfaction.</li>
+            </ul>
+
+          </div>
+
+          <div class="content">
+            <h3>2013 - 2018</h3>
+            <p>Branch Manager <br />
+              <em>TCF National Bank</em></p>
+            <ul class="info">
+              <li>Prioritized building relationships with client, by creating a customer centric branch that placed the client’s needs first.  Client satisfaction survey averaged 93% or 10 % higher than district average.</li>
+              <li>Coordinated the training and development of all employees, with weekly check-ins and monthly one on one. Each employees training consisted of learning the responsibilities of position higher than their current position, and identifying their strengths and strengthening their weakness.</li>
+              <li>Coordinated the preparation of the quarterly branch budget, which included revenue and expenditure, future projections and analysis of the past year.</li>
+              <li>Key day-to-day responsibilities included: processing teller transaction, performing audits, processing new client accounts, performing client outreach, identifying client needs, exam application and supporting documentation for financial status, calculate repayment risk and provided expert guidance on mortgage and personal loans.</li>
+            </ul>
+
+          </div>
+        </div>
+        <!-- End 3rd Row -->
+        <!-- Begin 4th Row -->
+        <div class="entry">
+          <h2>SKILLS</h2>
+          <div class="content">
+            <h3>Software Knowledge</h3>
+            <ul class="skills">
+              <li>GitHub</li>
+              <li>MySQL</li>
+              <li>Tableau</li>
+              <li>Flask</li>
+              <li>Command Line</li>
+              <li>AWS</li>
+              <li>Heroku</li>
+              <li>GIT</li>
+            </ul>
+          </div>
+          <div class="content">
+            <h3>Languages</h3>
+            <ul class="skills">
+              <li>CSS/HTML</li>
+              <li>Python</li>
+              <li>JavaScript</li>
+              <li>SQL</li>
+              <li>Microsoft Suite</li>
+              <li>C++</li>
+            </ul>
+          </div>
+
+          <div class="content">
+            <h3>Tools</h3>
+            <ul class="skills">
+              <li>Excel</li>
+              <li>Scikit</li>
+              <li>Pandas</li>
+              <li>Outlook</li>
+              <li>Jupyter Notebook</li>
+              <li>VSCO</li>
+            </ul>
+          </div>
+
+        </div>
+    
+      </div>
+      <div class="clear"></div>
+      <div class="paper-bottom"></div>
+    </div>
+    <!-- End Paper -->
+  </div>
+  <div class="wrapper-bottom"></div>
+</div>
+<div id="message"><a href="#top" id="top-link">Go to Top</a></div>
+<!-- End Wrapper -->
+<!-- <script src="static/js/app.js"></script> -->
+</body>
+
+</html>
