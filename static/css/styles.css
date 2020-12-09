@@ -179,13 +179,13 @@ body{
 
 
 #myInput {
-  background-position: 10px 10px;
+  background-position: 11px 10px;
   background-repeat: no-repeat;
   width: 100%;
   font-size: 12px;
-  padding: 10px 10px 10px 15px;
+  padding: 11px 11px 12px 15px;
   border: 1px solid #ddd;
-  margin-bottom: 5px;
+  margin-bottom: 7px;
 }
 
 @media screen and (max-width:1124px){

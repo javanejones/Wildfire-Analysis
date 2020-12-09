@@ -74,8 +74,14 @@ L.control.layers(baseMaps, overlayMaps, overlayMap, {
 var link = "static/data/fire.geojson";
 
 var myIcon = L.icon({
-  iconUrl: 'images/fireicon.png',
-  iconSize: [32, 32],
+  iconUrl: 'images/fireicon1.png',
+  // shadowUrl: 'images/shadow.png',
+
+  iconSize:     [35, 50], // size of the icon
+  shadowSize:   [30, 50], // size of the shadow
+  iconAnchor:   [22, 74], // point of the icon which will correspond to marker's location
+  shadowAnchor: [0, -20],  // the same for the shadow
+  popupAnchor:  [50, 50] // point from which the popup should open relative to the iconAnchor
 });
 
 
@@ -89,13 +95,12 @@ d3.json(link, function(data) {
   // Create a GeoJSON layer containing the features array on the earthquakeData object
   // Run the onEachFeature function once for each piece of data in the array
   L.geoJSON(data, {
-    // pointToLayer: function (feature, latlng) {
-    //   return new L.CircleMarker(latlng, {
-    //     radius: 3,     // radius(magnitude) is a magnitude and can cause the radius size of the circle changed based on a variable
-    //     fillOpacity: 0
-    //   });
-
-    // },
+    pointToLayer: function (feature, latlng) {
+      return L.marker (latlng,
+         {icon: myIcon}
+      
+        );
+    },
     onEachFeature: popUpMsg,
     filter: function(feature, layer){
       return (feature.properties.StartYear == '2020')
