@@ -3,7 +3,7 @@
   // Give each feature a popup describing the place and time of the earthquake
   //["Incident name"] instead of .incident
   function popUpMsg(feature, layer) {
-    layer.bindPopup("<h3>" + "Incident Name:" +feature.properties.Incident  +
+    layer.bindPopup("<h3>" +feature.properties.Incident  +
       "</h3><hr><p>"+ "County:"+ feature.properties.County +"<br>"+ "Location:" + feature.properties.Location+"<br>" + "Year:" + feature.properties.StartYear +"<br>" + "Acres Burned:" + feature.properties.Acresburned+ "</p>");
   }
 
@@ -72,6 +72,12 @@ L.control.layers(baseMaps, overlayMaps, overlayMap, {
 
 // Use this link to get the geojson data.
 var link = "static/data/fire.geojson";
+
+var myIcon = L.icon({
+  iconUrl: 'images/fireicon.png',
+  iconSize: [32, 32],
+});
+
 
 // Perform a GET request to the query URL
 d3.json(link, function(data) {
