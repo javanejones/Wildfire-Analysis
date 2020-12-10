@@ -16,37 +16,37 @@
 
 1. Clean and organize
   
--	Python- Pandas
+  -	Python- Pandas
 
--	Pyhton- Numpy
+  -	Pyhton- Numpy
 
--	Pyhton- datetime
+  -	Pyhton- datetime
 
--	Python json
+  -	Python json
 
--	Excel
+  -	Excel
   
   
 2. Data Visualization
 
--	Plotly- Js
+  -	Plotly- Js
 
--	Python- Follium
+  -	Python- Follium
 
--	Python- Seaborn
+  -	Python- Seaborn
 
--	Python- Matplotlib
+  -	Python- Matplotlib
 
--	Python- Pandas
+  -	Python- Pandas
 
-•	Javascript
+  -	Javascript
   
   
 3. Deployment
 
-•	HTMl/CSS
+  -	HTMl/CSS
 
-•	Javacript
+  -	Javacript
 
 
 ## Data Sources
