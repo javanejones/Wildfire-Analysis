@@ -2,17 +2,17 @@
 
 ![wildfire_img](images/california.jpg)
 
-##Deployment link: https://javanejones.github.io/Wilfire-Analysis/
+## Deployment link: https://javanejones.github.io/Wilfire-Analysis/
 
-##Introduction
-
-*
+## Introduction
 
 *
 
 *
 
-##Tools Used
+*
+
+## Tools Used
 
 1. Clean and organize
   
@@ -49,7 +49,7 @@
 •	Javacript
 
 
-##Data Sources
+## Data Sources
 
 1. Wildfire data https://www.fire.ca.gov/incidents/
 2. Weather data https://www.ncdc.noaa.gov/cag/ & https://aqs.epa.gov/aqsweb/airdata/download_files.html#Annual
