@@ -17,24 +17,37 @@ Tools Used
 1. Clean and organize
   
 •	Python- Pandas
+
 •	Pyhton- Numpy
+
 •	Pyhton- datetime
+
 •	Python json
+
 •	Excel
+  
   
 2. Data Visualization
 
 •	Plotly- Js
+
 •	Python- Follium
+
 •	Python- Seaborn
+
 •	Python- Matplotlib
+
 •	Python- Pandas
+
 •	Javascript
+  
   
 3. Deployment
 
 •	HTMl/CSS
+
 •	Javacript
+
 
 Data Sources
 
