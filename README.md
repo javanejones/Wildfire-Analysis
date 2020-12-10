@@ -2,4 +2,4 @@
 
 Deployment link: https://javanejones.github.io/Wilfire-Analysis/
 
-Images/california.jpg
+![wildfire_img](Images/california.jpg)
