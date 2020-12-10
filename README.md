@@ -1,4 +1,4 @@
-## Wildfire-Analysis
+## California Wildfire-Analysis
 
 ![wildfire_img](images/california.jpg)
 
