@@ -1,43 +1,43 @@
-# Wildfire-Analysis
+## Wildfire-Analysis
 
 ![wildfire_img](images/california.jpg)
 
-Deployment link: https://javanejones.github.io/Wilfire-Analysis/
+##Deployment link: https://javanejones.github.io/Wilfire-Analysis/
 
-Introduction
-
-*
+##Introduction
 
 *
 
 *
 
-Tools Used
+*
+
+##Tools Used
 
 1. Clean and organize
   
-•	Python- Pandas
+-	Python- Pandas
 
-•	Pyhton- Numpy
+-	Pyhton- Numpy
 
-•	Pyhton- datetime
+-	Pyhton- datetime
 
-•	Python json
+-	Python json
 
-•	Excel
+-	Excel
   
   
 2. Data Visualization
 
-•	Plotly- Js
+-	Plotly- Js
 
-•	Python- Follium
+-	Python- Follium
 
-•	Python- Seaborn
+-	Python- Seaborn
 
-•	Python- Matplotlib
+-	Python- Matplotlib
 
-•	Python- Pandas
+-	Python- Pandas
 
 •	Javascript
   
@@ -49,7 +49,7 @@ Tools Used
 •	Javacript
 
 
-Data Sources
+##Data Sources
 
 1. Wildfire data https://www.fire.ca.gov/incidents/
 2. Weather data https://www.ncdc.noaa.gov/cag/ & https://aqs.epa.gov/aqsweb/airdata/download_files.html#Annual
