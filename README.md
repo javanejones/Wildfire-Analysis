@@ -4,7 +4,7 @@
 
 ## Deployment link 
 
-- https://javanejones.github.io/Wilfire-Analysis/
+- https://javanejones.github.io/Wildfire-Analysis/
 
 ## Introduction
 
